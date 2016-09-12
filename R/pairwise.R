@@ -7,7 +7,7 @@
 #' a smarter way to look at data, consider using ggpairs in the ggally package.
 #'
 #' @details
-#' The default panelling functions that \code{pairsplot} uses are listed in the
+#' The default paneling functions that \code{pairsplot} uses are listed in the
 #' help file for the \code{pairs()} function.
 #'
 #' @param mat A matrix of numeric (non-categorical) data
