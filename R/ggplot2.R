@@ -22,6 +22,8 @@
 #' sizes in the days that I did not yet use Cairo. When the lemmens package is
 #' loaded, \code{lemmens_geoms()} is automatically called.
 #'
+#' @aliases theme_lem theme_l
+#'
 #' @export
 theme_lemmens <- theme_bw() +
 	theme(text=element_text(size=18), 
@@ -33,12 +35,11 @@ theme_lemmens <- theme_bw() +
         legend.position='bottom')
 #' @export
 theme_l <- theme_lemmens
-
-
-pd <- position_dodge(width=0.7)
+#' @export
+theme_lem <- theme_lemmens
 
 ## Different geom defaults that I predominantly used in my pre-Cairo days.
-mygeoms <- function(use=TRUE, reset=!use) {
+lemmens_geoms <- function(use=FALSE, reset=!use) {
 	if (use) {
 		update_geom_defaults('point', list(size=3.5))
 		update_geom_defaults('errorbar', list(size=1.0, width=0.3))
@@ -62,3 +63,4 @@ theme_lemmens.old <- theme_bw() +
         panel.border=element_rect(colour='black', size=1.2),
         legend.position='bottom')
 
+pd <- position_dodge(width=0.7)
