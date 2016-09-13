@@ -2,9 +2,15 @@ Package: lemmens
 Title: A Collection Of Functions
 Version: 0.0.0.9
 Authors@R: person("Paul", "Lemmens", email = "paul.lemmens@gmail.com", role = c("aut", "cre"))
-Description: A collection of functions that developed personally and have been (re)using too often to be left copied around as simple code snippets.
-Depends: R (>= 3.3.1)
+Description: A collection of functions that developed personally and have been
+    (re)using too often to be left copied around as simple code snippets.
+Depends:
+    R (>= 3.3.1)
+Imports:
+    ggplot2
+URL: https://github.org/paullemmens/lemmens-package/
+BugReports: https://github.org/paullemmens/lemmens-package/issues/
 License: GPLv2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 5.0.1
