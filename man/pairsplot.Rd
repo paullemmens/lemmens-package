@@ -19,7 +19,7 @@ panel functions that work best with non-categorical data. If you need to do
 a smarter way to look at data, consider using ggpairs in the ggally package.
 }
 \details{
-The default panelling functions that \code{pairsplot} uses are listed in the
+The default paneling functions that \code{pairsplot} uses are listed in the
 help file for the \code{pairs()} function.
 }
 \seealso{
