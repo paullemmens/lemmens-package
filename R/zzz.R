@@ -1,3 +1,3 @@
-## .onLoad <- function() {
-##   lemmens_geoms(use = FALSE)
-## }
+.onLoad <- function(libname = find.package('lemmens'), pkgname = 'lemmens') {
+  lemmens:::lemmens_geoms(use = FALSE)
+}
