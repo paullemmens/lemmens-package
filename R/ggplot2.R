@@ -57,11 +57,11 @@ lemmens_geoms <- function(use=FALSE, reset=!use) {
 }
 
 ## Lastly theme adaptation that I regularly use.
-theme_lemmens.old <- theme_bw() +
-	theme(text=element_text(size=18), 
-        axis.title.x=element_text(vjust=-0.2), 
-	      axis.title.y=element_text(angle=90, vjust=1),
-        panel.border=element_rect(colour='black', size=1.2),
-        legend.position='bottom')
+## theme_lemmens.old <- theme_bw() +
+## 	theme(text=element_text(size=18), 
+##         axis.title.x=element_text(vjust=-0.2), 
+## 	      axis.title.y=element_text(angle=90, vjust=1),
+##         panel.border=element_rect(colour='black', size=1.2),
+##         legend.position='bottom')
 
 pd <- ggplot2::position_dodge(width=0.7)
