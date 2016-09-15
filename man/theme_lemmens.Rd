@@ -15,17 +15,18 @@ Over the years, I developed a personalized style/theme \code{theme_lemmens}
 for use in ggplot2. In
 earlier versions, this theme, and some other personalizations were in my
 .Rprofile that I synced across machines via Tresorit. \code{lemmens_geoms()}
-an additional function that sets default values for various geoms that make
+is an additional function that sets default values for various geoms that made
 more sense with my default theme.
 }
 \details{
-To make things a little clearer and more consistent with other (packages), almost
-everything has been renamed. \emph{This will most definately break older scripts.}
+To make things a little clearer and more consistent with other packages' styles,
+almost
+all objects have been renamed. \emph{This will most definately break older scripts.}
 
 \code{theme_lemmens} is my old \code{mytheme2} that is a cousin from
 \code{mytheme} and
 distinguishes itself by not using boxes and other decorating stuff around
-ggplot2's facets. \code{theme_l} and \code{theme_lem} are abbreviations.
+ggplot2's facet headers/strips. \code{theme_l} and \code{theme_lem} are abbreviations.
 
 \code{lemmens_geoms(use = FALSE)} adapts default values for a series of geoms.
 the \code{use} parameter defaults to FALSE, because I used bigger default
