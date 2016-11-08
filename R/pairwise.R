@@ -23,10 +23,8 @@
 #' 
 #FIXME: make sure to make the dots permeate further in the function
 pairsplot <- function(mat, ...) {
-  # FIXME: verify whether this input sanity check is sufficient
-  stopifnot(is.matrix(mat))
   pairs(mat, upper.panel = .panel.cor, diag.panel = .panel.hist)
-  return(invisible)
+  invisible()
 }
 
 .panel.cor <- function(x, y, digits = 2, prefix = "", ...)
