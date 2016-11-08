@@ -4,9 +4,7 @@ Version: 0.0.0.10
 Authors@R: person("Paul", "Lemmens", email = "paul.lemmens@gmail.com", role = c("aut", "cre"))
 Description: A collection of functions that developed personally and have been
     (re)using too often to be left copied around as simple code snippets.
-Depends: ggplot2
-         BayesFactor
-         plotrix
+Imports: ggplot2, BayesFactor, plotrix
 URL: https://github.org/paullemmens/lemmens-package/
 BugReports: https://github.org/paullemmens/lemmens-package/issues/
 License: GPLv2

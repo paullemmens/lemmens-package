@@ -15,20 +15,18 @@
 #' to \code{bf.t.test()}.
 #'
 #' @export
-                                        # FIXME: add y, paired, and sidedness parameters.
-bf.t.test <- function(x = NULL, y = NULL, paired = FALSE, oneSided = FALSE, ...) {
+## FIXME: add y, paired, and sidedness parameters. need to test whether not specifying
+## paired in call to .plotPosterior results in it being forwarded via ... argument.
+bf.t.test <- function(x = NULL, y = NULL, paired = FALSE, oneSided = FALSE, addInformation, ...) {
+  ##FIXME: here I need to do something to specify the nullInterval parameter that ttestBF uses forwarded
+  ##implementing onesided tests. Something like null.int <- c(-Inf, 0) for oneSided == 'left'.
   BF <- BayesFactor::extractBF(BayesFactor::ttestBF(x, y, rscale = "medium"), onlybf = TRUE, ...)
-  .plotPosterior.ttest(x = x, rscale = "medium", BF = BF, ...)
-  return(invisible())
+  .plotPosterior.ttest(x = x, y = y, rscale = "medium", BF = BF, ...)
 }
 
-## FIXME: figure out which of plotrix' functions are being used below.
-## library(plotrix)
 
 .likelihoodShiftedT <- function(par, data) {
-    
   -sum(log(dt((data - par[1])/par[2], par[3])/par[2]))
-    
 }
 
 ## function that returns the posterior density
