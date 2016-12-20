@@ -17,6 +17,7 @@ The function returns invisibly.
 column of the matrix \code{mat} against the other ones. It uses two custom
 panel functions that work best with non-categorical data. If you need to do
 a smarter way to look at data, consider using ggpairs in the ggally package.
+It defaults to calculating the (parametric) Pearson correlation r.
 }
 \details{
 The default paneling functions that \code{pairsplot} uses are listed in the

@@ -5,6 +5,7 @@
 #' column of the matrix \code{mat} against the other ones. It uses two custom
 #' panel functions that work best with non-categorical data. If you need to do
 #' a smarter way to look at data, consider using ggpairs in the ggally package.
+#' It defaults to calculating the (parametric) Pearson correlation r.
 #'
 #' @details
 #' The default paneling functions that \code{pairsplot} uses are listed in the
@@ -23,16 +24,16 @@
 #' 
 #FIXME: make sure to make the dots permeate further in the function
 pairsplot <- function(mat, ...) {
-  pairs(mat, upper.panel = .panel.cor, diag.panel = .panel.hist)
+  pairs(mat, upper.panel = .panel.cor, diag.panel = .panel.hist, method = 'pearson')
   invisible()
 }
 
-.panel.cor <- function(x, y, digits = 2, prefix = "", ...)
+.panel.cor <- function(x, y, digits = 2, prefix = "", method = method, ...)
 {
   usr <- par("usr")
   on.exit(par(usr))
   par(usr = c(0, 1, 0, 1))
-  r <- cor.test(x, y, method = 'spearman', exact = FALSE)
+  r <- cor.test(x, y, method = method, exact = FALSE)
   txt <- format(c(r$estimate, 0.123456789), digits = digits)[1]
   if (r$p.value < 0.0001) {
     postfix <- '***'
@@ -44,7 +45,7 @@ pairsplot <- function(mat, ...) {
     postfix <- ''
   }
   txt <- paste0(prefix, txt, postfix)
-  cex.cor <- 0.8/strwidth(txt)    
+  cex.cor <- 0.8/strwidth(txt)
   text(0.5, 0.5, txt, cex = cex.cor)
 }
 
