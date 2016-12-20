@@ -15,13 +15,27 @@
 #' to \code{bf.t.test()}.
 #'
 #' @export
-## FIXME: add y, paired, and sidedness parameters. need to test whether not specifying
-## paired in call to .plotPosterior results in it being forwarded via ... argument.
+## FIXME: add y, paired, and sidedness parameters.
+## FIXME: need to test whether not specifying paired in call to .plotPosterior results in it being forwarded via ... argument.
+## FIXME: implement only three values for oneSided like in t.test()
 bf.t.test <- function(x = NULL, y = NULL, paired = FALSE, oneSided = FALSE, addInformation, ...) {
-  ##FIXME: here I need to do something to specify the nullInterval parameter that ttestBF uses forwarded
-  ##implementing onesided tests. Something like null.int <- c(-Inf, 0) for oneSided == 'left'.
-  BF <- BayesFactor::extractBF(BayesFactor::ttestBF(x, y, rscale = "medium"), onlybf = TRUE, ...)
-  .plotPosterior.ttest(x = x, y = y, rscale = "medium", BF = BF, ...)
+
+  ## Translate from JASP's oneSided parameter to BayesFactor::ttestBF nullInterval parameter.
+  null.int <- NULL
+  if (oneSided == 'left') {
+    null.int <- c(-Inf, 0)
+  } else if (oneSided == 'right') {
+    null.int <- c(0, Inf)
+  } else {
+    stop('invalid specification of oneSided in bf.t.test().\n')
+    }
+
+  ## Package BayesFactor does all the number crunching.
+  res.t.test <- BayesFactor::ttestBF(x, y, nullInterval = null.int, rscale = 'medium')
+  BF <- BayesFactor::extractBF(res.t.test, onlybf = TRUE, ...)
+
+  ## JASP's code to provide the pretty picture(s).
+  .plotPosterior.ttest(x = x, y = y, rscale = "medium", BF = BF, oneSided = oneSided, ...) # FIXME: Add paired parameter?
 }
 
 
@@ -31,7 +45,7 @@ bf.t.test <- function(x = NULL, y = NULL, paired = FALSE, oneSided = FALSE, addI
 
 ## function that returns the posterior density
 .dposteriorShiftedT <- function(x, parameters, oneSided) {
-    
+
   if (oneSided == FALSE) {
     dt((x - parameters[1])/parameters[2], parameters[3])/parameters[2]
   } else if (oneSided == "right") {
@@ -43,7 +57,7 @@ bf.t.test <- function(x = NULL, y = NULL, paired = FALSE, oneSided = FALSE, addI
 
 ## function that returns the prior density
 .dprior <- function(x, r, oneSided = oneSided) {
-    
+
   if (oneSided == "right") {
     y <- ifelse(x < 0, 0, 2/(pi * r * (1 + (x/r)^2)))
     return(y)
