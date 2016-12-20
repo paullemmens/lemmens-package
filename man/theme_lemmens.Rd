@@ -6,7 +6,7 @@
 \alias{theme_lem}
 \alias{theme_lemmens}
 \title{Collection of functions and settings for ggplot2}
-\format{An object of class \code{theme} (inherits from \code{gg}) of length 44.}
+\format{An object of class \code{theme} (inherits from \code{gg}) of length 57.}
 \usage{
 theme_lemmens
 }
