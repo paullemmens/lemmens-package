@@ -26,4 +26,3 @@ obtain the beautiful plots that JASP creates.
 \code{ttestBF} in the BayesFactor package for information on additional parameters that can be provided
 to \code{bf.t.test()}.
 }
-

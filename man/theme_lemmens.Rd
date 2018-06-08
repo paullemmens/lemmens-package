@@ -2,9 +2,9 @@
 % Please edit documentation in R/ggplot2.R
 \docType{data}
 \name{theme_lemmens}
-\alias{theme_l}
-\alias{theme_lem}
 \alias{theme_lemmens}
+\alias{theme_lem}
+\alias{theme_l}
 \title{Collection of functions and settings for ggplot2}
 \format{An object of class \code{theme} (inherits from \code{gg}) of length 57.}
 \usage{
@@ -34,4 +34,3 @@ sizes in the days that I did not yet use Cairo. When the lemmens package is
 loaded, \code{lemmens_geoms()} is automatically called.
 }
 \keyword{datasets}
-

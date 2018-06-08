@@ -28,4 +28,3 @@ help file for the \code{pairs()} function.
 varying types of data in a smarter way.
 \link{http://personality-project.org/r/Rfunc/pairs.panels.R}
 }
-

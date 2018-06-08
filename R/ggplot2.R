@@ -66,3 +66,22 @@ lemmens_geoms <- function(use=FALSE, reset=!use) {
 ##         legend.position='bottom')
 
 pd <- ggplot2::position_dodge(width=0.7)
+
+#' Color Brewer Defaults for Theme Lemmens
+#'
+#' The function returns a list of \code{scale_*_brewer} scales with
+#' specific settings that I like. This reduces typing time.
+#'
+#' @param type String to indicate type scale: sequential, diverging, or
+#'     qualitative (default).
+#' @param palette One of my favorite palettes: Set1 (default), Paired,
+#'     or Dark2.
+#'
+#' @return A list of function calls that can be added to an existing
+#'     ggplot object.
+#'
+#' @export
+lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
+  return(list(ggplot::scale_fill_brewer(type = type, palette = palette, ...),
+              ggplot::scale_colour_brewer(type = type, palette = palette, ...)))
+}
