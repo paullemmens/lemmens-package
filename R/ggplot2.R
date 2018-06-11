@@ -82,6 +82,6 @@ pd <- ggplot2::position_dodge(width=0.7)
 #'
 #' @export
 lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
-  return(list(ggplot::scale_fill_brewer(type = type, palette = palette, ...),
-              ggplot::scale_colour_brewer(type = type, palette = palette, ...)))
+  return(list(ggplot2::scale_fill_brewer(type = type, palette = palette, ...),
+              ggplot2::scale_colour_brewer(type = type, palette = palette, ...)))
 }
