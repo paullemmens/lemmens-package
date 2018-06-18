@@ -1,6 +1,6 @@
 Package: lemmens
 Title: A Collection Of Functions
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("Paul", "Lemmens", email = "paul.lemmens@gmail.com", role = c("aut", "cre"))
 Description: A collection of functions that developed personally and have been
     (re)using too often to be left copied around as simple code snippets.

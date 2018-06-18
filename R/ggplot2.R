@@ -85,3 +85,18 @@ lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
   return(list(ggplot2::scale_fill_brewer(type = type, palette = palette, ...),
               ggplot2::scale_colour_brewer(type = type, palette = palette, ...)))
 }
+
+#' @title A personalized ggthemes::solarized dark theme.
+#'
+#' @description a list containing a series of adaptations to make a plot use the
+#'     ggthemes::solarized theme (dark version) with personal adaptations
+#'     particularly regarding strip and legend key background.
+#'
+lemmens_solarized <- list(
+  ggthemes::scale_colour_solarized(),
+  ggthemes::theme_solarized(light = FALSE),
+  ggplot2::theme(strip.background = ggplot2::element_rect(colour = NA, fill = NA),
+                 strip.text = ggplot2::element_text(colour = 'grey30'),
+                 legend.key = ggplot2::element_rect(fill = NA)),
+  ggplot2::guides(shape = ggplot2::guide_legend(override.aes = list(colour = 'grey60')))
+)
