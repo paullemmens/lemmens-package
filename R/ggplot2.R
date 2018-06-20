@@ -92,6 +92,7 @@ lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
 #'     ggthemes::solarized theme (dark version) with personal adaptations
 #'     particularly regarding strip and legend key background.
 #'
+#' @export
 lemmens_solarized <- list(
   ggthemes::scale_colour_solarized(),
   ggthemes::theme_solarized(light = FALSE),

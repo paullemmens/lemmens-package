@@ -2,6 +2,7 @@
 
 export(bf.t.test)
 export(lemmens_brewer)
+export(lemmens_solarized)
 export(pairsplot)
 export(theme_l)
 export(theme_lem)
