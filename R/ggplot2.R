@@ -35,10 +35,6 @@ theme_lemmens <- ggplot2::theme_bw() +
                  #strip.text  =  ggplot2::element_text(size  =  rel(1.0)),
                  legend.position = 'bottom')
 
-#' @export
-theme_l <- theme_lemmens
-#' @export
-theme_lem <- theme_lemmens
 
 ## Different geom defaults that I predominantly used in my pre-Cairo days.
 lemmens_geoms <- function(use=FALSE, reset=!use) {
@@ -56,14 +52,6 @@ lemmens_geoms <- function(use=FALSE, reset=!use) {
 		ggplot2::update_geom_defaults('smooth', list(size=0.5))
 	}
 }
-
-## Lastly theme adaptation that I regularly use.
-## theme_lemmens.old <- theme_bw() +
-## 	theme(text=element_text(size=18), 
-##         axis.title.x=element_text(vjust=-0.2), 
-## 	      axis.title.y=element_text(angle=90, vjust=1),
-##         panel.border=element_rect(colour='black', size=1.2),
-##         legend.position='bottom')
 
 pd <- ggplot2::position_dodge(width=0.7)
 
