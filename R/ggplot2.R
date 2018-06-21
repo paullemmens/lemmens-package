@@ -84,6 +84,7 @@ lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
 #' @export
 lemmens_solarized <- list(
   ggthemes::scale_colour_solarized(),
+  ggthemes::scale_fill_solarized(),
   ggthemes::theme_solarized(light = FALSE),
   ggplot2::theme(strip.background = ggplot2::element_rect(colour = NA, fill = NA),
                  strip.text = ggplot2::element_text(colour = 'grey30'),
