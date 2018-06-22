@@ -82,12 +82,13 @@ lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
 #'     particularly regarding strip and legend key background.
 #'
 #' @export
-lemmens_solarized <- list(
-  ggthemes::scale_colour_solarized(),
-  ggthemes::scale_fill_solarized(),
-  ggthemes::theme_solarized(light = FALSE),
-  ggplot2::theme(strip.background = ggplot2::element_rect(colour = NA, fill = NA),
-                 strip.text = ggplot2::element_text(colour = 'grey30'),
-                 legend.key = ggplot2::element_rect(fill = NA)),
-  ggplot2::guides(shape = ggplot2::guide_legend(override.aes = list(colour = 'grey60')))
-)
+lemmens_solarized <- function(accent = 'blue') {
+  return(list(ggthemes::scale_colour_solarized(accent = accent),
+              ggthemes::scale_fill_solarized(accent = accent),
+              ggthemes::theme_solarized(light = FALSE),
+              ggplot2::theme(strip.background = ggplot2::element_rect(colour = NA, fill = NA),
+                            strip.text = ggplot2::element_text(colour = 'grey30'),
+                            legend.key = ggplot2::element_rect(fill = NA)),
+              ggplot2::guides(shape = ggplot2::guide_legend(override.aes = list(colour = 'grey60')))
+              ))
+}

@@ -14,10 +14,10 @@ qualitative (default).}
 or Dark2.}
 }
 \value{
-A list of function calls that can be added to an existing
-    ggplot object.
+A list that can be added to an existing ggplot object.
 }
 \description{
 The function returns a list of \code{scale_*_brewer} scales with
-specific settings that I like. This reduces typing time.
+specific settings that I like together with the \code{theme_lemmens}.
+This reduces typing time.
 }

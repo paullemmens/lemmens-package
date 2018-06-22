@@ -4,7 +4,7 @@
 \name{lemmens_solarized}
 \alias{lemmens_solarized}
 \title{A personalized ggthemes::solarized dark theme.}
-\format{An object of class \code{list} of length 4.}
+\format{An object of class \code{list} of length 5.}
 \usage{
 lemmens_solarized
 }
