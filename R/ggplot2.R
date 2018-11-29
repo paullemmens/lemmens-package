@@ -1,4 +1,4 @@
-#' @title Collection of functions and settings for ggplot2
+#' @title Collection Of Functions And Settings For Ggplot2
 #'
 #' @description
 #' Over the years, I developed a personalized style/theme \code{theme_lemmens}
@@ -12,11 +12,6 @@
 #' To make things a little clearer and more consistent with other packages' styles,
 #' almost
 #' all objects have been renamed. \emph{This will most definately break older scripts.}
-#'
-#' \code{theme_lemmens} is my old \code{mytheme2} that is a cousin from
-#' \code{mytheme} and
-#' distinguishes itself by not using boxes and other decorating stuff around
-#' ggplot2's facet headers/strips. \code{theme_l} and \code{theme_lem} are abbreviations.
 #'
 #' \code{lemmens_geoms(use = FALSE)} adapts default values for a series of geoms.
 #' the \code{use} parameter defaults to FALSE, because I used bigger default
@@ -63,26 +58,31 @@ pd <- ggplot2::position_dodge(width=0.7)
 #'     qualitative (default).
 #' @param palette One of my favorite palettes: Set1 (default), Paired,
 #'     or Dark2.
+#' @param ... Other parameters passed onward to other functions.
 #'
 #' @return A list that can be added to an existing ggplot object.
 #'
-#' @aliases theme_lemmens
-#'
 #' @export
 lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
-  return(list(lemmens::gg.lemmens,
+  return(list(gg.lemmens,
               ggplot2::scale_fill_brewer(type = type, palette = palette, ...),
               ggplot2::scale_colour_brewer(type = type, palette = palette, ...)))
 }
+
+#' Default Lemmens Theme.
+#'
+#' Uses the adapted \code{ggplot2::theme_bw} with colour-brewer styling.
 #'
 #' @export
-theme_lemmens <- lemmens::lemmens_brewer()
+theme_lemmens <- lemmens_brewer()
 
 #' @title A personalized ggthemes::solarized dark theme.
 #'
 #' @description a list containing a series of adaptations to make a plot use the
 #'     ggthemes::solarized theme (dark version) with personal adaptations
 #'     particularly regarding strip and legend key background.
+#'
+#' @param accent String to indicate accent (starting) colour (default: blue).
 #'
 #' @export
 lemmens_solarized <- function(accent = 'blue') {

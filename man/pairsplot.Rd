@@ -8,6 +8,8 @@ pairsplot(mat, ...)
 }
 \arguments{
 \item{mat}{A matrix of numeric (non-categorical) data}
+
+\item{...}{Other parameters that are passed onward.}
 }
 \value{
 The function returns invisibly.
@@ -24,7 +26,7 @@ The default paneling functions that \code{pairsplot} uses are listed in the
 help file for the \code{pairs()} function.
 }
 \seealso{
-\link{https://ggobi.github.io/ggally/ggpairs.html} for a function that tackles
+\link[https://ggobi.github.io/ggally/ggpairs.html]{ggpairs} for a function that tackles
 varying types of data in a smarter way.
-\link{http://personality-project.org/r/Rfunc/pairs.panels.R}
+\link[http://personality-project.org/r/Rfunc/pairs.panels.R]{pairs.panels.R}
 }

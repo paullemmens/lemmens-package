@@ -12,6 +12,8 @@ qualitative (default).}
 
 \item{palette}{One of my favorite palettes: Set1 (default), Paired,
 or Dark2.}
+
+\item{...}{Other parameters passed onward to other functions.}
 }
 \value{
 A list that can be added to an existing ggplot object.

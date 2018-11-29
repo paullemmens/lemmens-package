@@ -12,11 +12,12 @@
 #' help file for the \code{pairs()} function.
 #'
 #' @param mat A matrix of numeric (non-categorical) data
+#' @param ... Other parameters that are passed onward.
 #'
 #' @seealso
-#' \link{https://ggobi.github.io/ggally/ggpairs.html} for a function that tackles
+#' \link[https://ggobi.github.io/ggally/ggpairs.html]{ggpairs} for a function that tackles
 #' varying types of data in a smarter way.
-#' \link{http://personality-project.org/r/Rfunc/pairs.panels.R}
+#' \link[http://personality-project.org/r/Rfunc/pairs.panels.R]{pairs.panels.R}
 #'
 #' @return The function returns invisibly.
 #'
