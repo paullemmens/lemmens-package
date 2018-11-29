@@ -12,7 +12,7 @@ Imports:
     plotrix
 URL: https://github.org/paullemmens/lemmens-package/
 BugReports: https://github.org/paullemmens/lemmens-package/issues/
-License: GPLv2
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
