@@ -5,7 +5,7 @@ Authors@R: person("Paul", "Lemmens", email = "paul.lemmens@gmail.com", role = c(
 Description: A collection of functions that developed personally and have been
     (re)using too often to be left copied around as simple code snippets.
 Depends:
-    R
+    R (>= 3.3.0)
 Imports:
     ggplot2,
     BayesFactor,
