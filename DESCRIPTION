@@ -15,4 +15,4 @@ BugReports: https://github.org/paullemmens/lemmens-package/issues/
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1

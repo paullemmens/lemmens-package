@@ -19,7 +19,7 @@
 #' loaded, \code{lemmens_geoms()} is automatically called.
 #'
 #' @export
-gg.lemmens <- ggplot2::theme_bw() +
+theme_lemmens <- ggplot2::theme_bw() +
 	ggplot2::theme(text = ggplot2::element_text(size = 18), 
                  axis.title.x = ggplot2::element_text(vjust = -0.2), 
                  axis.title.y = ggplot2::element_text(angle = 90, vjust = 1),
@@ -64,17 +64,9 @@ pd <- ggplot2::position_dodge(width=0.7)
 #'
 #' @export
 lemmens_brewer <- function(type = 'qual', palette = 'Set1', ...) {
-  return(list(gg.lemmens,
-              ggplot2::scale_fill_brewer(type = type, palette = palette, ...),
+  return(list(ggplot2::scale_fill_brewer(type = type, palette = palette, ...),
               ggplot2::scale_colour_brewer(type = type, palette = palette, ...)))
 }
-
-#' Default Lemmens Theme.
-#'
-#' Uses the adapted \code{ggplot2::theme_bw} with colour-brewer styling.
-#'
-#' @export
-theme_lemmens <- lemmens_brewer()
 
 #' @title A personalized ggthemes::solarized dark theme.
 #'
