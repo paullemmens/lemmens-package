@@ -23,6 +23,7 @@ theme_lemmens <- ggplot2::theme_bw() +
 	ggplot2::theme(text = ggplot2::element_text(size = 18), 
                  axis.title.x = ggplot2::element_text(vjust = -0.2), 
                  axis.title.y = ggplot2::element_text(angle = 90, vjust = 1),
+                 plot.caption = ggplot2::element_text(size = 11 * 0.8),
                  panel.border = ggplot2::element_rect(colour = 'black', size = 1.2),
                  strip.background  =  ggplot2::element_rect(colour  =  NA, fill  =  NA),
                  #strip.text  =  ggplot2::element_text(size  =  rel(1.0)),
